@@ -1,0 +1,251 @@
+section {
+	width: 100%;
+	max-width: 1920px;
+	margin: auto;	
+	overflow: hidden;
+	position: relative;
+	padding: 75px 0;
+	@media only screen and (max-width : $tw) {
+		padding: 55px 0;
+	}
+	@media only screen and (max-width : $mw) {
+		padding: 35px 0;
+	}
+}
+
+.section-inner {
+	max-width: 1660px;
+	padding: 0 20px;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	&.wide {
+		max-width: 100%;
+	}
+
+	@media only screen and (max-width : $mw) {
+		padding: 0 10px;
+	}
+}
+
+.content {
+	@include f-r;
+	font-size: 18px;
+	color: #21273A;
+	line-height: 1.5;
+	&.narrow {
+		max-width: 950px;
+		margin: auto;
+		text-align: justify;
+	}
+	&.about {
+		font-size: 18px;
+		color: #3d4246;
+		line-height: 1.2;
+	}
+	&.colored {
+		font-size: 20px;
+		color: #362f6f;
+	}
+	p,ul,li,h1,h2,h3,h4,h5,img {
+		margin-top: 15px;
+	}
+	a {
+		color: #3255F5;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	ul {
+		list-style: disc;
+    	padding-right: 25px;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.centered {
+	text-align: center;
+}
+
+.parts {
+	display: flex;
+	margin: 0 -45px;
+	&.ai-center {
+		align-items: center;
+	}
+	.part {
+		width: 50%;
+		padding: 0 45px;
+		position: relative;
+		&:nth-child(1) {
+		}
+		&:nth-child(2) {
+		}
+		.image {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		flex-wrap: wrap;
+		.part {
+			width: 100%;
+			&:nth-child(2) {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+
+.section-title {
+	@include f-r;
+	font-size: 40px;
+	line-height: 1;
+	color: #3d4246;
+	position: relative;
+	padding-right: 35px;
+
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 73px;
+		width: 23px;
+		background-color: #b9bcbf;
+	}
+
+	@media only screen and (max-width : $lw) {
+		font-size: 35px;
+		padding-right: 30px;
+		&:before {
+			height: 65px;
+			width: 18px;
+		}
+	}
+	@media only screen and (max-width : $mw) {
+		font-size: 30px;
+		padding-right: 25px;
+		&:before {
+			height: 50px;
+			width: 15px;
+		}
+	}
+}
+
+.title-regular {
+	@include f-r;
+	font-size: 35px;
+	color: #3d4246;
+
+	@media only screen and (max-width : $mw) {
+		font-size: 30px;
+	}
+}
+.section-subtitle {
+	@include f-r;
+	font-size: 18px;
+	color: #252A39;
+	text-align: center;
+	margin-top: 10px;
+	@media only screen and (max-width : $tw) {
+		font-size: 18px;
+	}
+	@media only screen and (max-width : $mw) {
+		font-size: 16px;
+	}
+}
+
+.button-regular {
+	@include f-r;
+	font-size: 20px;
+	line-height: 1;
+	color: #fff;
+	background: #636641;
+	padding: 5px 15px;
+	padding-top: 7px;
+	border-radius: 200px;
+	transition: 0.5s;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	&:hover {
+		background: #b9bcbf;
+	}
+}
+
+.loading:after {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    content: "\f1ce";
+    animation: fa-spin .75s linear infinite;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    color: #227BC9;
+    z-index: 2;
+}
+
+#sm_menu_ham {
+	position: static;
+	span {
+		background-color: #3d4246;
+		height: 3px;
+	}
+}
+
+.sm_menu_outer {
+	background: #3d4246;
+	&.slide .mobile_menu .sub-menu {
+		background: #3d4246;;
+		height: calc(100vh - 45px);
+	}
+	.mobile_menu {
+		li {
+			border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 0) 100%) 0 0 1 0;
+		}
+		li.hasChild > a, li.back a {
+			background-size: 20px !important;
+		}
+		a {
+			@include f-r;
+			 padding: 15px 15px;
+		}
+		.current_page_item {
+			>a {
+				@include f-m;
+			}
+		}
+	}
+}
+
+.sm_menu_outer.slide .mobile_menu li.hasChild > a {
+    background: url(../plugins/mmenu/images/next.png) no-repeat scroll 10px center / 5% auto;
+}
+
+.sm_menu_outer .mobile_menu li.back a {
+    padding: 20px 45px 20px 5px;
+    background: url(../plugins/mmenu/images/back.png) no-repeat scroll right 15px center / 5% auto;
+}
+
+.sm_menu_outer {
+    bottom: 0;
+    height: calc(100vh - 45px);
+    top: 45px;
+}

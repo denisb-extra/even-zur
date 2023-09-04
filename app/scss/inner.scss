@@ -1,0 +1,567 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+	padding: 18px 0;						
+
+	text-align: center;
+    position: relative;
+    z-index: 10;
+    max-width: none;
+	.section-inner {
+		z-index: 2;
+	}
+
+	.breadcrumbs {
+		@include f-r;
+		font-size: 18px;
+        margin-top: 0px;
+        text-align: right;
+		.breadcrumb_last {
+			@include f-m;
+		}
+	}
+
+    @media only screen and (max-width : $tw) { 
+	}
+
+    @media only screen and (max-width : $mw) {
+	}
+}
+/* --------------------- /Section top-inner ---------------------- */
+
+/* ---------------------- Section project ---------------------- */
+section.project {
+	padding: 45px 0;
+	.content {
+		margin-top: 25px;
+		max-width: 1000px;
+	}
+
+	.project-info {
+		margin-top: 25px;
+
+		.line {
+			margin-top: 10px;
+			display: flex;
+			align-items: center;
+			.item {
+				margin-top: 0;
+			}
+		}
+		.item {
+			display: flex;
+			align-items: center;
+
+			@include f-r;
+			font-size: 20px;
+			margin-top: 10px;
+			&:first-child {
+				margin-top: 0;
+			}
+			.icon {
+				width: 35px;
+				margin-left: 10px;
+				text-align: center;
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.button {
+        @include f-r;
+        font-size: 20px;
+        color: #3d4246;
+        display: inline-block;
+        margin-right: 35px;
+        transition: 0.5s;
+
+        &:hover {
+            color: #636641;
+        }
+    }
+
+	.button-regular {
+		float: left;
+	}
+
+	@media only screen and (max-width : $lw) {
+		padding: 30px 0;
+	}
+
+	@media only screen and (max-width : $mw) {
+		.button-regular {
+			float: none;
+			margin: 0 0px;
+			margin-top: 35px;
+		}
+		.line {
+			flex-wrap: wrap;
+			.sep {
+				display: none;
+			}
+			.button {
+				margin-right: 45px;
+			}
+		}
+	}
+}
+/* --------------------- /Section project ---------------------- */
+
+/* ---------------------- Section about ---------------------- */
+section.about {
+	&.en {
+		direction: ltr;
+		* {
+			direction: ltr;
+		}
+
+		.section-title {
+			padding-right: 0;
+			padding-left: 35px;
+			&:before {
+				right: auto;
+				left: 0;
+			}
+			@media only screen and (max-width : $lw) {
+				padding-left: 30px;
+			}
+			@media only screen and (max-width : $mw) {
+				padding-left: 25px;
+			}
+		}
+	}
+	.content {
+		margin-top: 55px;
+		columns: 2;
+		column-gap: 40px;
+		p {
+			break-inside: avoid-column;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		.content {
+			margin-top: 35px;
+			columns: 1;
+		}
+	}
+}
+/* --------------------- /Section about ---------------------- */
+
+/* ---------------------- Section contact ---------------------- */
+section.contact {
+	&.en {
+		direction: ltr;
+		* {
+			direction: ltr;
+		}
+
+		.section-title {
+			padding-right: 0;
+			padding-left: 35px;
+			&:before {
+				right: auto;
+				left: 0;
+			}
+			@media only screen and (max-width : $lw) {
+				padding-left: 30px;
+			}
+			@media only screen and (max-width : $mw) {
+				padding-left: 25px;
+			}
+		}
+
+		.wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"] {
+			direction: ltr;
+		}
+
+		.wpcf7 {
+			.wrapper-submit {
+				float: right;
+			}
+			.wpcf7-form-control-wrap {
+				&[data-name*="acceptance"] {
+					float: left;
+				}
+			}
+			.sections {
+				padding-right: 0;
+				padding-left: 65px;
+				background-position: left 30px top;
+				.section {
+				
+					&:before {
+						right: auto;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper-form {
+		padding-top: 15px;
+		display: flex;
+
+		.project-image {
+			padding-right: 100px;
+			width: 33%;
+			img {
+				max-width: 100%;
+			}
+		}
+
+		@media only screen and (max-width : $mw) {
+			flex-wrap: wrap;
+			.project-image {
+				width: 100%;
+				margin-top: 35px;
+				text-align: center;
+				padding-right: 0;
+				img {
+					margin: auto;
+				}
+			}
+		}
+	}
+	.message {
+		max-width: 500px;
+		@include f-r;
+		font-size: 30px;
+		margin-top: 55px;
+	}
+
+	.wpcf7 {
+		margin-top: 35px;
+		flex-grow: 1;
+		.wrapper-submit {
+			float: left;
+			width: 150px;
+		}
+
+		.wpcf7-form-control-wrap {
+			&[data-name*="acceptance"] {
+				width: auto;
+				float: right;
+			}
+	
+		}
+        .sections {
+            display: flex;
+            margin: 0 -35px;
+			max-width: 1100px;
+			padding-right: 65px;
+			background: #fff url("../images/icons/contact.png") no-repeat;
+			background-position: right 30px top;
+            .section {
+                padding: 0 35px;
+				flex-grow: 1;
+
+				position: relative;
+				&:before {
+					content: "";
+					position: absolute;
+					display: block;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					width: 1px;
+					background-color: #3d424654;
+				}
+
+				&:first-child {
+					&:before {
+						content: none;
+					}
+				}
+            }
+        }
+    }
+
+	@media only screen and (max-width : $mw) {
+		.message {
+			font-size: 20px;
+			margin-top: 35px;
+		}
+		.wpcf7 {
+			.sections {
+				flex-wrap: wrap;
+				padding-right: 0;
+				padding-left: 0 !important;
+				padding-top: 55px;
+				.section {
+					width: 100%;
+					&:before {
+						content: none;
+					}
+				}	
+			}
+		}
+	}
+}
+/* --------------------- /Section contact ---------------------- */
+
+/* ---------------------- Section architect ---------------------- */
+section.architect {
+	.wrapper {
+		margin: 0 -30px;
+		margin-top: 35px;
+		display: flex;
+
+		.section {
+			padding: 0 30px;
+		}
+	}
+
+	.image {
+		width: 350px;
+		flex-shrink: 0;
+		@media only screen and (max-width : $tw) {
+			width: 250px;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.info {
+		max-width: 700px;
+		border-right: 1px solid #3d4246;
+		.content {
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.contacts {
+		.item {
+			display: flex;
+			align-items: center;
+			margin-top: 15px;
+			white-space: nowrap;
+			&:first-child {
+				margin-top: 0;
+			}
+			.icon {
+				width: 25px;
+				margin-left: 25px;
+				text-align: center;
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		.wrapper {
+			flex-wrap: wrap;
+		}
+		.image {
+			width: 100%;
+		}
+
+		.contacts {
+			margin-top: 25px;
+		}
+
+
+		.info {
+			margin-top: 25px;
+			border-right: none;
+			border-top: 1px solid #3d4246;
+			padding-top: 25px !important;
+		}
+	}
+}
+/* --------------------- /Section architect ---------------------- */
+
+/* ---------------------- Section experts-top ---------------------- */
+section.experts-top {
+	.parts {
+		margin-top: 55px;
+	}
+	.content {
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+/* --------------------- /Section experts-top ---------------------- */
+
+/* ---------------------- Section experst-info ---------------------- */
+section.experst-info {
+	.parts {
+		margin-top: 55px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		.parts .part:nth-child(2) {
+			margin-top: 55px;
+		}
+	}
+}
+/* --------------------- /Section experst-info ---------------------- */
+
+.box-expert {
+	.numbers {
+		margin-bottom: 25px;
+	}
+
+	.title {
+		font-size: 35px;
+		margin-top: 20px;
+	}
+
+	@media only screen and (max-width : $mw) {
+		.title {
+			font-size: 25px;
+		}
+	}
+}
+
+
+/* ---------------------- Section blog ---------------------- */
+section.blog {
+	.boxes {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -40px;
+		margin-top: 45px;
+		.box {
+			width: 50%;
+			padding: 40px;
+		}
+	}
+
+	@media only screen and (max-width : $mw) {
+		.boxes {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -25px;
+			margin-top: 45px;
+			.box {
+				width: 100%;
+				padding: 25px;
+			}
+		}
+	}
+}
+/* --------------------- /Section blog ---------------------- */
+
+.box-post {
+	.inner {
+		position: relative;
+	}
+	.image {
+		@include flex-center;
+		font-size: 0;
+		height: 385px;
+		overflow: hidden;
+		margin-top: 20px;
+		img {
+			height: 100%;
+		}
+	}
+	.info {
+		.title {
+			font-size: 30px;
+		}
+		.description {
+			font-size: 22px;
+			color: #3d4246;
+			line-height: 1.2;
+			margin-top: 15px;
+		}
+	}
+
+	.button {
+		font-size: 22px;
+		display: inline-block;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width : $mw) {
+		.info {
+			.title {
+				font-size: 25px;
+			}
+			.description {
+				font-size: 19px;
+			}
+		}
+		.image {
+			height: auto;
+			max-height: 350px;
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+/* ---------------------- Section post ---------------------- */
+section.post {
+
+	.img-main {
+		width: 50%;
+		float: left;
+		margin-right: 50px;
+		margin-bottom: 50px;
+		
+		&.mobile {
+			display: none;
+		}
+		img {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
+
+	.content {
+		.section-title {
+			margin-top: 0;
+			margin-bottom: 35px;
+			p {
+				margin-top: 0;
+			}
+		}
+
+
+	}
+
+	@media only screen and (max-width : $tw) {
+	
+	}
+
+	@media only screen and (max-width : $mw) { 
+
+		.img-main {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-top: 20px;
+			display: none;
+			&.mobile {
+				display: block;
+			}
+		}
+	}
+}
+/* --------------------- /Section post ---------------------- */
