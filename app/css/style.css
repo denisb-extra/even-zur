@@ -209,8 +209,7 @@ section {
   font-size: inherit;
   text-rendering: auto;
   content: "\f1ce";
-  -webkit-animation: fa-spin .75s linear infinite;
-          animation: fa-spin .75s linear infinite;
+  animation: fa-spin .75s linear infinite;
   height: 20px;
   width: 20px;
   line-height: 20px;
@@ -447,6 +446,16 @@ header {
         flex-grow: 1; } }
 
 /* --------------------- /header ---------------------- */
+/* --------------------- close project ---------------------- */
+.close-project {
+  color: #000;
+  font-size: 30px;
+  position: relative;
+  left: 0px;
+  z-index: 14;
+  cursor: pointer; }
+
+/* --------------------- /close project ---------------------- */
 /* ---------------------- Section slider-top ---------------------- */
 section.slider-top {
   padding: 0;
@@ -1137,7 +1146,9 @@ section.top-inner {
     font-family: 'fbreforma-regular', 'esphimere-regular';
     font-size: 18px;
     margin-top: 0px;
-    text-align: right; }
+    text-align: right;
+    display: flex;
+    justify-content: space-between; }
     section.top-inner .breadcrumbs .breadcrumb_last {
       font-family: 'fbreforma-medium'; }
 

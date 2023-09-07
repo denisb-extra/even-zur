@@ -18,6 +18,8 @@ section.top-inner {
 		.breadcrumb_last {
 			@include f-m;
 		}
+		display: flex;
+		justify-content: space-between;
 	}
 
     @media only screen and (max-width : $tw) { 
